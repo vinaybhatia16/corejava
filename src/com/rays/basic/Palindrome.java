@@ -1,0 +1,27 @@
+package com.rays.basic;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+
+		int num = 121;
+		int temp = num;
+		int reverse = 0;
+
+		while (num > 0) {
+			int digit = num % 10;
+			reverse = reverse * 10 + digit;
+			num = num / 10;
+		}
+
+		System.out.println("Reversed number is: " + reverse);
+
+		if (temp == reverse) {
+			System.out.println("number is palindrome");
+		}
+
+		else {
+			System.out.println("number is not palindrome");
+		}
+	}
+}
